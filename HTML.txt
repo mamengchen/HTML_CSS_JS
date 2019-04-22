@@ -38,6 +38,10 @@ html中的标签一般都是成对出现的，分开始标签和结束标签。�
 				<a href = "mailto: mmc@qq.com?cc=imoocAdmin@imooc.com">发送</a>
 			：密件抄送地址	bcc=			在收件人地址后用bcc=地址，可以填上密件抄送地址
 				<a href = "mailto: mmc@qq.com?bcc=pp@imooc.com">发送</a>
+			：多个收件人     ;				用分号隔开多个收件人的地址，可以实现发送给多个收件人功能
+				<a href = "mailto: mmc@qq.com;pp@imooc.com">发送</a>
+			:邮件主题		subject=		<a href = "mailto: mmc@qq.com?subject = 发送电子邮件">发送</a>
+			:邮件内容		body=			<a href = "mailto: mmc@qq.com?body = 欢迎来到慕课网">发送</a>
 		
 		<p>：在浏览器中<em> 默认用斜体表示，<strong> 用粗体表示。
 		<q>标签，短文本引用:页面显示就是加双引号（但是意义又不相同），说明你引用别人的话
@@ -65,3 +69,14 @@ html中的标签一般都是成对出现的，分开始标签和结束标签。�
 			table tr td,th{border:1px solid #000;}
 			</style>
 		caption标签，为表格添加标题和摘要:用法<caption>标题文本</caption>
+		<img>标签，为网页插入图片:<img src="图片地址" alt="下载失败时的替换文本" title = "提示文本">
+		
+		1.<form> ：<form>标签是成对出现的，以<form>开始，以</form>结束。
+		2.action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。
+		3.method ： 数据传送的方式（get/post）。
+		<form    method="post"   action="save.php">
+			<label for="username">用户名:</label>
+			<input type="text" name="username" />
+			<label for="pass">密码:</label>
+			<input type="password" name="pass" />
+		</form>
