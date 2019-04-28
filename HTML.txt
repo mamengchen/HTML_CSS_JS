@@ -81,3 +81,36 @@ html中的标签一般都是成对出现的，分开始标签和结束标签。�
 			<label for="pass">密码:</label>
 			<input type="password" name="pass" />
 		</form>
+		1.type:
+			当type = ‘text’时，输入框为文本输入框
+			当type = ‘password’时，输入框为密码输入框
+		2.name：为文本框命名，以备后台程序ASP，PHP使用。
+		3.value：为文本输入框设置默认值。（一般为提示消息）
+		
+	文本域，支持多行文本输入
+	语法：
+	<textarea  rows="行数" cols="列数">文本</textarea>
+	1.<texttarea>标签是成对出现的，以<textarea>开始，以</textarea>结束。
+	2.cols：多行输入域的列数。
+	3.rows：多行输入域的行数。
+	4.在<textarea></textarea>标签之间可以输入默认值。
+	
+	使用单选框、复选框，让用户选择
+	1.type：
+		当type="radio"时，控件为单选框
+		当type="checkbox"时，控件为复选框
+	2.value：提交数据到服务器的值（后台程序PHP使用）
+	3.name：为控件命名，以备后台程序ASP，PHP使用
+	4.checked：当设置checked="checked"时，该选项被默认选中
+	
+	使用下拉列表框，节省空间
+	1.<option value='提交值'>显示的值</option>
+	2.selected="selected"设置属性，则该选项就被默认选中。
+	3.在<select>标签中设置multiple="multiple"属性，就可以实现多选
+	4.使用提交按钮，提交数据   语法：<input   type="submit"   value="提交">
+	5.使用重置按钮，重置表单信息   语法：<input type="reset" value="重置">
+	
+	form表单中的label标签
+	label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户该进了可能性。如果你在label标签内
+	点击文本，就会触发此控件。
+	注意：标签的for属性中的值应当与相关控件的id属性值一定要相同
