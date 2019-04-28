@@ -13,7 +13,56 @@
 		table tr td,th{border:1px solid #000;}
 		</style>
 	</head>
-：
+
+	<form method="post" action="save.php">
+		<label for="username">用户名：</label>
+		<input type="text" name="username" id="username" value="" />
+		<label for="poss">密码：</label>
+		<input type="password" name="pass" id="pass" value="" />
+		<input type="submit" value="确定" name="submit" />
+		<input type="reset" value="重置" name="reset" />
+	</form>
+	
+	<form method="post" action="save.php">
+		<label>性别：</label>
+		男<input type="radio" value="男" name="rediolove" />
+		女<input type="radio" value="女" name="rediolove" />
+	</form>
+	<form action="save.php" method="post">
+		<label>爱号：</label>
+		<select>
+			<option value="看书">看书</option>
+			<option value="旅游" selected="selected">旅游</option>
+			<option value="运动">运动</option>
+			<option value="购物">购物</option>
+			<option value="爬山">爬山</option>
+		</select>
+		<input type="submit" value="确定" />
+		<input type="reset" value="重置" />
+	</form>
+	
+	<form action="save.php" method="post" >
+		<label>爱好:</label>
+		<select multiple="multiple">
+		<option value="看书">看书</option>
+		<option value="旅游">旅游</option>
+		<option value="运动">运动</option>
+		<option value="购物">购物</option>
+		</select>
+	</form>
+	
+	<form method="post" action="save.php">
+		<label>联系我们</label>
+		<textarea cols="50" rows="10">在这里输入内如.....</textarea>
+		<input type="submit" value="确定" name="submit" />
+		<input type="reset" value="重置" name="reset" />
+	</form>
+	
+	<form>
+		<label for="like">你对什么运动感兴趣</label>
+		<input type="checkbox">
+	</form>
+	
 	<body>
 	<ul>
 		<li><span>年薪30W</span></li>
