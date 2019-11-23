@@ -1,0 +1,10 @@
+一个ip地址最多可以同时对外发起多少tcp连接？
+	当server端连接数达到28232时，client开始抛出大量异常
+	理论上单机对外端口数可达65535,但实际对外可建立的连接默认最大只有28232个,在linux下执行以下命令可知:
+	 cat /proc/sys/net/ipv4/ip_local_port_range
+	 也就是在这个区间内的端口可以使用,所以单个IP对外最多只能发送28232个tcp请求.
+	通过以下命令可以临时调整这个区间的范围,但是系统重启后会还原成默认值.
+	 echo "1024 65535"> /proc/sys/net/ipv4/ip_local_port_range
+	 要想永远生效可以修改/etc/sysctl.conf文件,增加一行:
+	 net.ipv4.ip_local_port_range= 1024 65535
+	 sysctl -p
