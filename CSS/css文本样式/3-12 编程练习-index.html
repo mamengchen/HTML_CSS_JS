@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <meta charset="UTF-8">
+   <title>vertical-align</title>
+   <style type="text/css">
+    *{padding:0px;margin: 0px;}
+   
+    .warp1{    
+              height:80px;
+              width: 100%;
+              background-color: #14191e;              
+           /*在此补充代码*/
+			line-height:80px;
+			font-size:24px;
+			text-align:center;
+             }
+
+     .warp1 h1{ color:#fff;
+       /*在此补充代码*/	   
+	   }
+
+     .warp2{
+              height:400px;
+              width: 100%;
+              border:1px  #14191e solid;
+              /*在此补充代码*/
+             display:table;
+			 }
+
+     .content{    
+              /*在此补充代码*/
+			  line-height:1.5em;
+			 font-size:14px;
+			 display:table-cell;
+			 text-align:center;
+			 vertical-align:middle;
+              }
+
+     .content  p{ width:500px;
+                  font-family: "微软雅黑";
+				  text-align:left;
+                  margin:0 auto;
+        /*在此补充代码*/}   
+
+   </style>
+</head>
+<body>
+<div class="warp1">
+          <h1>欢迎来到慕课网</h1>      
+</div>
+  <div class="warp2">
+        <div class="content">
+           <p>慕课网，只学有用的！</p>
+           <p>慕课网（IMOOC）是IT技能学习平台。慕课网(IMOOC)提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。并且富有交互性及趣味性，你还可以和朋友一起编程。</p>
+        </div>
+</div>    
+
+</body>
+</html>
