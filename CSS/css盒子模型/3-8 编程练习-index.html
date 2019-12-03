@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>元素的宽度</title>
+    <style type="text/css">
+	div{background-color:pink;width:600px;height:600px;}
+    p{background-color:yellow;height:200px;}
+      /*补充样式*/
+      .p1{width:30%;height:30%;}
+	  .p2{max-width:30%;max-height:30%;}
+	  .p3{min-height:200px;max-width:300px;}
+      
+    </style>
+</head>
+<body>
+    <div>
+        <p class="p1">第一个P标签是父元素宽、高的30%</p>
+        <p class="p2">第二个P标签的最大宽度是父元素的30%，最大高度是父元素的30%</p>
+        <p class="p3">第三个P标签的最小高度是200px，最大宽度是300px</p>
+    </div>
+</body>
+</html>
