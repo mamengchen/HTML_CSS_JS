@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>display属性</title>
+        <style type="text/css">
+          /*样式补充*/
+          body,div,h3{margin:0px;padding:0px;font-family:"微软雅黑";}
+          .big{width:220px;background-color:#f2f4f6;margin:0 auto;}
+		  .elec,.wash,.clothes{display:none;}
+		  .div1:hover .elec,.div2:hover .wash,.div3:hover .clothes{display:block;}
+		  div.div1,div.div2,div.div3{
+			border-bottom:1px #d9dde1 solid;
+			text-align:center;
+		  }
+		  
+        </style>
+    </head>
+    <body>
+    <div class="big">
+        <div class="div1">
+            <h3>家电</h3>
+            <ul class="elec">
+                <li>冰箱</li>
+                <li>洗衣机</li>
+                <li>空调</li>
+            </ul>
+        </div>
+        <div class="div2">
+            <h3>洗护</h3>
+            <ul class="wash">
+                <li>洗衣液</li>
+                <li>消毒液</li>
+                <li>柔顺剂</li>
+            </ul>
+        </div>
+        <div  class="div3">
+            <h3>衣物</h3>
+             <ul class="clothes">
+                <li>衬衫</li>
+                <li>裤子</li>
+                <li>卫衣</li>
+            </ul>
+        </div>
+      </div>
+</body>
+</html>

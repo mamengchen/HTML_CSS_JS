@@ -8,3 +8,4 @@
 	 要想永远生效可以修改/etc/sysctl.conf文件,增加一行:
 	 net.ipv4.ip_local_port_range= 1024 65535
 	 sysctl -p
+	 
