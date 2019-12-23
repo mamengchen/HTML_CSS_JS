@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+           /*此处写代码*/
+		   float:left;
+        }
+        .div2{
+            width: 300px;
+            height: 300px;
+            background: blue;
+            /*此处写代码*/
+			float:right;
+        }
+        .div3{
+            width: 100px;
+            height: 100px;
+            background: green;
+           /*此处写代码*/
+           float:inherit;  /*该属性继承继承伟为使得DIV3继承父元素的浮动属性*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2">
+        <div class="div3"></div>
+    </div>
+</body>
+</html>

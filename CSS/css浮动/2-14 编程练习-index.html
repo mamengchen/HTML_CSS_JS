@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		.clear{
+			/*clear:both;*/
+		}
+		.clearfix:after{
+			content:'.';
+			higher:0;
+			display:block;
+			visibility:hidden;
+			clear:both;
+		}
+        .per{
+            width: 300px;
+            height: auto;
+            border:2px solid #aaa;
+			/*overflow:hidden;*/
+        }
+        .li{
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 5px;
+            float: left;
+        }
+        /*此处写代码*/
+    </style>
+</head>
+<body>
+    <div class="per clearfix">
+        <div class="li"></div>
+        <div class="li"></div>
+        <!-- 此处写代码 -->
+		<div class="clear"></div>
+    </div>
+</body>
+</html>
