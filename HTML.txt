@@ -13,6 +13,7 @@ html中的标签一般都是成对出现的，分开始标签和结束标签。�
     <body>...</body>
 </html>
 
+
 	1. <html></html>称为根标签，所有的网页标签都在<html></html>中。
 	2. <head> 标签用于定义文档的头部，它是所有头部元素的容器。
 	头部元素有<title>、<script>、 <style>、<link>、 <meta>等标签。
