@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    /*此处写代码*/
+	body{
+		margin:0;
+		padding:0;
+		background:#fff;
+	}
+	.headder,.footter{
+		width:100%;
+		background:black;
+		overflow:hidden;
+		zoom:1;
+	}
+	.headder .logo{
+		float:left;
+	}
+	.headder .nav{
+		float:right;
+		list-style:none;
+	}
+	.headder .nav li{
+		float:left;
+	}
+	.headder .nav li a,.footter .footnav li a{
+		padding:0 30px;
+		height:80px;
+		text-decoration:none;
+		line-height:80px;
+		display:block;
+		font-size:16px;
+		font-family:'微软雅黑';
+		color:#fff;
+	}
+	.headder .nav li a:hover{
+		color:orange;
+	}
+	.footter .footnav li a:hover{
+		color:orange;
+	}
+	.footter .footnav{
+		list-style:none;
+		margin-left:25%;
+	}
+	.footter .footnav li{
+		float:left;
+	}
+	.contexter {
+		padding:0 220px 0 300px;
+	}
+	.left,.right,.midden{
+		position:relative;
+		float:left;
+		min-height:700px;
+	}
+	.midden{
+		width:100%;
+		background:#FF1493;
+	}
+	.left{
+		width:300px;
+		margin-left:-100%;
+		left:-300px;
+		background:#B22222;
+	}
+	.right{
+		width:220px;
+		margin-left:-220px;
+		right:-220px;
+		background:#F08080
+	}
+	.icon{
+		padding:100px 0;
+	}
+	.bg{
+		background:orange;
+		line-height:30px;
+	}
+	.contexter .left h2{
+		padding:100px 0 0 0;
+	}
+	.contexter .right h2{
+		padding:100px 0 0 0;
+	}
+	.demo{
+		height:40px;
+		width:210px;
+	}
+  </style>
+</head>
+<body>
+  <!-- 此处写代码 -->
+  <div class="headder">
+	<div class="logo"><img src="http://climg.mukewang.com/58c0d2d900016ce303000100.png"/></div>
+	<ul class="nav">
+		<li><a href="#">课程</a></li>
+		<li><a href="#">职业路径</a></li>
+		<li><a href="#">实战</a></li>
+		<li><a href="#">猿问</a></li>
+		<li><a href="#">手记</a></li>
+	</ul>
+  </div>
+  <div class="contexter">
+	
+	<div class="midden">
+		<div class="icon" align="center"><img src="http://climg.mukewang.com/590037e00001fab706000400.jpg" /></div>
+	</div>
+	<div class="left">
+		<h2>课程推荐</h2>
+		<span class="bg">职业路径</span> HTML5与CSS3实现动态网页<br>
+		<span class="bg">职业路径</span> 零基础入门Android语法与界面<br>
+		<span class="bg">职业路径</span> iOS基础语法与常用控件<br>
+		<span class="bg">职业路径</span> PHP入门开发<br>
+		<span class="bg">职业路径</span> JAVA入门开发
+	</div>
+	<div class="right">
+		<h2>登录</h2>
+		<table>
+			<tr><td><input type="text" name="username" class="demo" placeholder="请输入用户名/手机号"/></td></tr>
+			<tr><td><input type="passwd" name="passwd" class="demo" placeholder="请输入密码"/></td></tr>
+			<tr><td><input type="submit" name="biu"/></tr>
+		</table>
+	</div>
+  </div>
+  <div class="footter">
+	<ul class="footnav" >
+		<li><a href="#">网站首页</a></li>
+		<li><a href="#">企业合作</a></li>
+		<li><a href="#">人才招聘</a></li>
+		<li><a href="#">联系我们</a></li>
+		<li><a href="#">常见问题</a></li>
+		<li><a href="#">友情链接</a></li>
+	</ul>
+  </div>
+</body>
+</html>

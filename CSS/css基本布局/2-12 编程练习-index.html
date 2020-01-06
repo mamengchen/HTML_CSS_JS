@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    /*此处写代码*/
+	body{margin:0;padding:0;background:#fff;}
+	.moster{width:100%;margin:0 auto;}
+	.moster .header{width:100%;}
+	.header{
+		width:100%;
+		higher:auto;
+		background:black;
+		overflow:hidden;
+	}
+	.header .logo{
+		float:left;
+		
+	}
+	.header .nav{
+		float:right;
+		
+	}
+	.header .nav li{
+		float:left;
+		margin-right:20px;
+	}
+	.header .nav li a{
+		padding:0 20px;
+		height:80px;
+		line-height:80px;
+		display:block;
+		font-size:16px;
+		font-family:'微软雅黑';
+		color:#fff;
+		text-decoration:none;
+	}
+	.header .nav li a:hover{
+		color:orange;
+	}
+	.context{overflow:hidden;background:orange;}
+	.lefttext{width:30%;height:1000px;background:#87CEEB;
+		float:left;
+	}
+	.midtext{width:30%;height:1000px;background:#87CEEB;
+		float:left;
+	}
+	.righttext{width:38%;height:1000px;background:#87CEEB;
+		float:right;
+	}
+	.bg{
+		background:red;
+		line-height:30px;
+	}
+	.footber{width:100%;background:#333;overflow:hidden;}
+	.footber .footnav{
+		list-style:none;
+	}
+	.footber .footnav li{
+		float:left;
+	}
+	.footber .footnav li a{
+		padding:0 20px;
+		height:80px;
+		line-height:80px;
+		display:block;
+		font-family:'微软雅黑';
+		font-size:16px;
+		color:#fff;
+	}
+  </style>
+</head>
+<body>
+  <!-- 此处写代码 -->
+	<div class="moster">
+		<div class="header">
+			<div class="logo">
+				<img src="http://climg.mukewang.com/58c0d2d900016ce303000100.png"/>
+			</div>
+			<ul class="nav">
+				<li><a href="#">课程</a></li>
+				<li><a href="#">职业路径</a></li>
+				<li><a href="#">实战</a></li>
+				<li><a href="#">猿问</a></li>
+				<li><a href="#">手记</a></li>
+			</ul>
+	</div>
+		<div class="context">
+			<div class="lefttext">
+				<h2>课程推荐</h2>
+				<span class="bg">职业规划</span> HTML5与CSS3实现动态网页<br>
+				<span class="bg">职业规划</span> 零基础入门Android语法与界面<br>
+				<span class="bg">职业规划</span> iOS基础语法与常用控件<br>
+				<span class="bg">职业规划</span> PHP入门开发<br>
+				<span class="bg">职业规划</span> JAVA入门开发
+			</div>
+			<div class="midtext">
+				<h2>相关课程</h2>
+				HTML CSS JavaScript<br>
+				HTML5 CSS Jquary<br>
+				移动端基础 移动端APP开发
+			</div>
+			<div class="righttext">
+				<h2 align="center">登录</h2>
+				<form>
+					<table align="center">
+						<tr>
+						<td><input type="text" name="username" placeholder="请入登录号"/></td>
+						</tr>
+						<tr>
+						<td><input type="password" name="password" placeholder="请入密码"/></td>
+						</tr>
+						<tr>
+						<td><input type="submit"/><td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="footber">
+			<ul class="footnav">
+			<li><a href="#">网站首页</a></li>
+			<li><a href="#">企业合作</a></li>
+			<li><a href="#">人才招聘</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">常见问题</a></li>
+			<li><a href="#">友情链接</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
