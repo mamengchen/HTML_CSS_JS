@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">	
+	<title>CSS布局</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		}
+		img{
+			width: 380px;
+			height: 240px;
+		}
+		/*此处写代码*/
+		.typename{
+			position:absolute;
+			top:0;
+			left:0;
+			width:380px;
+			height:240px;
+			background-color:#000;
+			opacity:0.5
+		}
+		.typename-top{
+			width: 200px;
+			height: 100px;
+			position: absolute;
+			top:120px;
+			margin-top:-50px;
+			z-index:2;
+			left:90px;
+		}
+		
+		.typename-top .bg{
+			padding-top:30px;
+			color: #fff;
+			font-size:20px;
+			font-weight:bolder;
+			text-align:center;
+			font-family: "微软雅黑";
+		}
+		
+		.typename-top button{
+			width:100px;
+			height:30px;
+			margin-top:10px;
+			color: #fff;
+			background-color: #F5704F;
+			font-family: "微软雅黑";
+			text-align:center;
+			font-weight:bolder;
+			border-radius:8px;
+			clear:both;
+			margin-left:50px;
+		}
+	</style>
+</head>
+<body>
+<nav>
+</nav>
+	<div>
+		<img src="http://climg.mukewang.com/58f829ca00010be703840240.jpg">
+	</div>
+	<!-- 此处写代码 -->
+	<div class="typename"></div>
+	<div class="typename-top">
+		<div class="bg">MY LIKE LIFE</div>
+		<button>LOOK MORE</button>
+	</div>
+</body>
+</html>
