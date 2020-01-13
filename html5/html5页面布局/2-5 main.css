@@ -1,0 +1,76 @@
+/* 在此完成CSS样式设置*/
+*{
+	margin:0px;
+	padding:0px;
+}
+
+section{
+	width:1200px;
+	margin:0 auto;
+}
+
+section > aside{
+	float:left;
+	width:400px;
+}
+
+section > article{
+	float:right;
+	width:720px;
+}
+h1{
+	font-size:30px;
+	font-weight:bolder;
+	margin-bottom:24px;
+}
+
+h1 > span{
+	color:#7c7c7c;
+}
+
+section > article {
+	float:right;
+}
+
+div{
+	position:relative;
+	
+}
+
+div > img{
+	position:absolute;
+	overflow:hidden;
+}
+
+div > h2{
+	position:absolute;
+	left:18px;
+	top:6px;
+	overflow:hidden;
+}
+
+div > dt{
+	position:absolute;
+	left:58px;
+	font-size:16px;
+	line-height:16px;
+	font-weight:bold;
+	text-decoration:underline;
+	top:-1px;
+}
+
+div > dd {
+	position:relative;
+	top:25px;
+	left:60px;
+	font-size:10px;
+	line-height:10px;
+	margin:40px 0px;
+}
+
+p{
+	margin-bottom:10px;
+	font-size:10px;
+	line-height:10px;
+}
+
