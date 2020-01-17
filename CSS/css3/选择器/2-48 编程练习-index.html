@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>伪元素</title>
+	<style type="text/css">
+		li{
+			list-style: none;
+		}
+		/*此处添加代码*/
+		li::before{
+			content:"*";
+		}
+		
+	</style>
+</head>
+<body>
+<ul>
+	<li>我是第一</li>
+	<li>我是第二</li>
+	<li>我是第三</li>
+	<li>我是第四</li>
+</ul>
+</body>
+</html>
