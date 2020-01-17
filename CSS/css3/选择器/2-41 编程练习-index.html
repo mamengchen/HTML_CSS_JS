@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height:150px;
+			background-color: #eee;
+			margin-top: 5px;
+		}
+		section{
+			width: 200px;
+			height: 30px;
+			margin-bottom: 5px;
+			background-color: #ff0;
+		}
+		/*此处写代码*/
+		div:empty{
+			background:#f00;
+		}
+		section:empty{
+			background:#adcdef;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<section>one</section>
+		<section>two</section>
+	</div>
+	<div></div>
+	<div>
+		<section>three</section>
+		<section>four</section>
+		<section>five</section>
+		<section></section>
+	</div>
+</body>
+</html>
