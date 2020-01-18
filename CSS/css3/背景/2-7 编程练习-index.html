@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>background-origin</title>
+		<style type="text/css">
+			.header{
+				width:200px;
+				height:150px;
+				margin:0 auto;
+			}
+			.logo{
+				width:350px;
+				height:200px;
+				border:10px solid rgba(0,255,0,0.8);
+				background: url("http://climg.mukewang.com/582c342b0001fd6507000210.jpg");
+				background-clip:content-box;
+			}
+			.logo:hover{
+				background: url("http://climg.mukewang.com/582c34220001091605000150.jpg") no-repeat 10px 10px;
+				background-origin:content-box;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="header">
+			<div class="logo">
+			</div>
+		</div>
+    </body>
+</html>
