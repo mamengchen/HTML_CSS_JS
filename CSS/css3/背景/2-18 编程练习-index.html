@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>background-image</title>
+    <style type="text/css">
+        /*此处写代码*/
+		*{
+			margin:0;
+			padding:0;
+		}
+		header{
+			width:300px;
+			background:#777;
+			height:300px;
+			margin:0 auto;
+		}
+		header > .logo{
+			width:300px;
+			height:290px;
+			background-image:url("http://climg.mukewang.com/582c3b780001a95103000090.jpg"),
+			url("http://climg.mukewang.com/582c3b6d0001197603000090.jpg"),
+			url("http://climg.mukewang.com/582c3b61000122dd03000090.jpg");
+		
+			background-repeat:no-repeat;
+			background-position:0 0,0 100px,0 200px;
+		}
+    </style>
+</head>
+<body>
+    <!-- 此处写代码 -->
+	<header>
+		<div class="logo">
+		</div>
+	</header>
+</body>
+</html>

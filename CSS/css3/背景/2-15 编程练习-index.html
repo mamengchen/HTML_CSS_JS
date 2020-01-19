@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>background属性</title>
+    <style type="text/css">
+        /*此处写代码*/
+		*{
+			margin:0;
+			padding:0;
+		}
+		
+		header{
+			width:600px;
+			height:300px;
+			border: 10px solid rgba(255,0,0,0.5);
+			background:#777;
+			margin: 0 auto;
+		}
+		header > .container {
+			width: 600px;
+			height: 100px;
+			position:relative;
+		}
+		header > .container > h2{
+			position:absolute;
+			top:40px;
+			left:45px;
+		}
+		
+		header > .logo{
+			width:600px;
+			height:170px;
+			background : url("http://climg.mukewang.com/582c34220001091605000150.jpg") no-repeat 50px 40px;
+		}
+    </style>
+</head>
+<body>
+    <!-- 此处写代码 -->
+	<header>
+		<div class="container">
+			<h2>慕课网（IMOOC）国内做大的IT技能学习平台</h2>
+		</div>
+		<div class="logo">
+		</div>
+	</header>
+</body>
+</html>
