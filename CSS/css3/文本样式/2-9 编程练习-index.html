@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2-3</title>
+    <style type="text/css">
+        /* 此处写代码*/
+		.big{
+			width:600px;
+			height:400px;
+			background:red;
+			margin:0 auto;
+			position:relative;
+		}
+		.box{
+			margin:50px 0;
+			display:block;
+			color:yellow;
+			width:0;
+			height:0;
+			border-right: 100px solid transparent;
+			border-bottom: 70px solid yellow;
+			border-left: 100px solid transparent;
+			transform:rotate(35deg);
+		}
+	
+		.box:before{
+			border-bottom:80px solid yellow;
+			border-left: 30px solid transparent;
+			border-right: 30px solid transparent;
+			position:absolute;
+			height:0;
+			width:0;
+			top:-45px;
+			left:-65px;
+			display:block;
+			content:"";
+			transform:rotate(-35deg);
+		}
+		.box:after{
+			position:absolute;
+			display:block;
+			color:red;
+			top: 3px;
+			left: -105px;
+			width:0px;
+			height:0px;
+			border-right:100px solid transparent;
+			border-bottom:70px solid yellow;
+			border-left:100px solid transparent;
+			transform:rotate(-70deg);
+			content:"";
+		}
+		.list1{
+			position:absolute;
+			top:60px;
+			left:30px;
+		}
+		
+		.list2{
+			transform:scale(0.2) rotate(30deg);
+			position:absolute;
+			left:135px;
+			top:-45px;
+		}
+		
+		.list3{
+			transform:scale(0.2) rotate(-30deg);
+			position:absolute;
+			left:180px;
+			top:20px;
+		}
+		
+		.list4{
+			transform:scale(0.2) rotate(10deg);
+			position:absolute;
+			left:180px;
+			top:85px;
+		}
+		
+		.list5{
+			transform:scale(0.2) rotate(20deg);
+			position:absolute;
+			left:160px;
+			top:150px;
+		}
+		
+    </style>
+</head>
+<body>
+    <!-- 此处写代码 -->
+	<div class="big">
+		<div class="list1 box"></div>
+		<div class="list2 box"></div>
+		<div class="list3 box"></div>
+		<div class="list4 box"></div>
+		<div class="list5 box"></div>
+	</div>
+	
+</body>
+</html>
