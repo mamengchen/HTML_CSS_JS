@@ -5,12 +5,186 @@
 	<title>Cartoon Dog</title>
 </head>
 <body>
-	<div class="dog">
-		<div class="forehead"></div>
-		<div class="face"></div>
-		<div class="chin"></div>
+	<div class="dog center">
+		<div class="forehead center"></div>
+		<div class="face center"></div>
+		<div class="chin center"></div>
 		<div class="ear"></div>
 		<div class="ear right"></div>
+		<div class="birthmark"></div>
+		<div class="eye">
+			<div class="pupil"></div>
+		</div>
+		<div class="eye right">
+			<div class="pupil"></div>
+		</div>
+		<div class="nose center">
+			<div class="nostril"></div>
+			<div class="nostril right"></div>
+		</div>
+	
 	</div>
+	<style>
+		:root{
+			--hl: #1b2f90;
+			--bg: #f9f9f6;
+		}
+		
+		body{
+			background: #ffc400;
+		}
+		
+		.dog {
+			width: 300px;
+			height: 400px;
+			position: relative;
+		}
+		
+		.center {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+			z-index: 1;
+		}
+		
+		.forehead {
+			width: 102px;
+			height: 48px;
+			background: var(--bg);
+			border-radius: 51px / 40px 40px 8px 8px;
+		}
+		
+		.face {
+			width: 110px;
+			height: 68px;
+			background: var(--bg);
+			border-radius:50%;
+			top:20px;
+		}
+		
+		.chin {
+			width: 104px;
+			height: 36px;
+			background: var(--bg);
+			border-radius: 52px / 0px 0px 36px 36px;
+			top: 60px;
+		}
+		
+		.ear {
+			width: 16px;
+			height: 70px;
+			background: var(--hl);
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			top: 34px;
+			transform-origin: 50% 0;
+			transform: translate(-42px, 0) rotate(10deg);
+			z-index: 0;
+		}
+		
+		.ear.right {
+			transform: scale(-1,1) translate(-27px, 0) rotate(10deg) ;
+		}
+		
+		.birthmark {
+			width: 30px;
+			height: 36px;
+			background: var(--hl);
+			border-radius: 15px / 17px 23px 2px 13px;
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+			top: 10px;
+			transform: translate(15px, 0) rotate(-10deg);
+		}
+		
+		.eye {
+			width: 24px;
+			height: 24px;
+			background: var(--bg);
+			border-radius: 12px / 13px 12px 12px 2px;
+			position: absolute;
+			z-index: 2;
+			left: 50%;
+			top: 20px;
+			transform-origin: 50% 0;
+			transform: translate(-44px, 0) rotate(10deg);
+			box-shadow: 1px 0px 0px 0px #000 inset, -1px 0px 5px 1px #ddd;
+			overflow: hidden;
+		}
+		
+		.eye.right{
+			transform: scale(-1,1) translate(-21px, 0) rotate(10deg);
+			box-shadow: 1px 0px 0px 0px #000 inset;
+		}
+		
+		.pupil {
+			width: 26px;
+			height: 26px;
+			background: #e79101;
+			border-radius: 50%;
+			position: absolute;
+			left: 3px;
+			top: 1px;
+			box-shadow: 0 0 8px 0 #000 inset;
+		}
+		.pupil:before {
+			width: 18px;
+			height: 18px;
+			background: #000;
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			content: '';
+		}
+		.pupil:after {
+			width: 5px;
+			height: 5px;
+			background: #fff;
+			border-radius: 50%;
+			position: absolute;
+			left: 3px;
+			top: 7px;
+			content: '';
+		}
+		
+		.nose {
+			width: 62px;
+			height: 32px;
+			top: 42px;
+			background: #363035;
+			z-index:1;
+			border-radius: 31px / 10px 10px 22px 22px;
+		}
+		
+		.nose:before {
+			content: '';
+			width: 60px;
+			height: 10px;
+			position: absolute;
+			left: 50%;
+			top: 1px;
+			transform: translate(-50%, 0);
+			border-radius: 30px / 8px 8px 2px 2px;
+			background: linear-gradient(30deg, #fff 0%,#fff 8%, #b1aeb1 15%, #b1aeb1 50%, #544d53 100%);
+		}
+		
+		.nostril {
+			width: 15px;
+			height: 4px;
+			top: 19px;
+			background: linear-gradient(0deg, #363035 0%, #000 100%);
+			position: absolute;
+			left: 50%;
+			border-radius: 50%;
+			transform: translate(-21px, 0) rotate(30deg);
+		}
+		.nostril.right {
+			transform: scale(-1,1) translate(-7px, 0) rotate(30deg);
+		}
+	</style>
 </body>
 </html>
