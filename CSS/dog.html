@@ -32,6 +32,15 @@
 		<div class="body center">
 			<div class="arm"></div>
 			<div class="arm right"></div>
+		
+			<div class="leg">
+				<div class="foot"></div>
+			</div>
+			
+			<div class="leg right">
+				<div class="foot"></div>
+			</div>
+			<div class="belly center"></div>
 		</div>
 		
 	</div>
@@ -39,6 +48,7 @@
 		:root{
 			--hl: #1b2f90;
 			--bg: #f9f9f6;
+			--t: 1s;
 		}
 		
 		body{
@@ -92,11 +102,15 @@
 			transform-origin: 50% 0;
 			transform: translate(-42px, 0) rotate(10deg);
 			z-index: 0;
+			animation: rotate var(--t) ease-out infinite;
 		}
 		
+		
 		.ear.right {
-			transform: scale(-1,1) translate(-27px, 0) rotate(10deg) ;
+			transform: scale(-1,1) translate(-27px, 0) rotate(10deg);
+			animation: rotate-r var(--t) ease-out infinite;
 		}
+		
 		
 		.birthmark {
 			width: 30px;
@@ -139,6 +153,7 @@
 			left: 3px;
 			top: 1px;
 			box-shadow: 0 0 8px 0 #000 inset;
+			animation: translate var(--t) ease-out infinite;
 		}
 		.pupil:before {
 			width: 18px;
@@ -192,6 +207,7 @@
 			left: 50%;
 			border-radius: 50%;
 			transform: translate(-21px, 0) rotate(30deg);
+			animation: resize var(--t) ease-out infinite;
 		}
 		.nostril.right {
 			transform: scale(-1,1) translate(-7px, 0) rotate(30deg);
@@ -202,9 +218,10 @@
 			height: 27px;
 			background: #671316;
 			border-radius: 34px / 0px 0px 27px 27px;
-			z-index: 1;
+			z-index: 2;
 			box-shadow: 0px 0px 4px 0px #000 inset;
 			top: 68px;
+			animation: open var(--t) ease-out infinite;
 		}
 		.mouth:before {
 			width: 68px;
@@ -213,7 +230,7 @@
 			border-radius: 34px / 0px 0px 5px 5px;
 			content: '';
 			position: absolute;
-			z-index:1;
+			z-index:2;
 		}
 		
 		.teen {
@@ -234,11 +251,12 @@
 		.tongue {
 			width: 34px;
 			height: 14px;
-			background； #a2504f;
+			background: #a2504f;
 			border-radius: 17px / 0px 0px 7px 7px;
 			z-index:0;
 			box-shadow: 0 0 4px 0 #111 inset;
 			top: 0px;
+			animation: extend var(--t) ease-out infinite;
 		}
 		
 		.body {
@@ -272,6 +290,69 @@
 		}
 		.arm.right {
 			transform: scale(-1,1) translate(-17px, 0) rotate(21deg);
+		}
+		
+		.leg {
+			width: 29px;
+			height: 50px;
+			background: linear-gradient(-85deg, #bbb 0%, #bbb 8%, #fff 20% , #fff 100%);
+			position: absolute;
+			left: 50%;
+			top: 40px;
+			border-radius: 15px / 5px 5px 15px 45px;
+			transform: translate(-32px,0);
+		}
+		.leg.right {
+			transform: scale(-1,1) translate(-3px, 0);
+		}
+		.foot {
+			width: 29px;
+			height: 15px;
+			background: linear-gradient(-120deg, #bbb 0%, #bbb 15%, #fff 20%, #fff 100%);
+			position: absolute;
+			left: 2px;
+			bottom: -8px;
+			border-radius: 15px / 10px 10px 5px 5px;
+		}
+		
+		.belly {
+			z-index: 2;
+			width: 60px;
+			height: 36px;
+			background: linear-gradient(0deg, #ddd 0%, #f9f9f6 20%, #f9f9f6 100%);
+			border-radius: 30px / 0px 0px 36px 36px;
+			top: 34px;
+		}
+		
+		@keyframes rotate {
+			0% {transform: translate(-42px, 0) rotate(10deg);}
+			50% {transform: translate(-42px, 0) rotate(25deg);}
+			100% {transform: translate(-42px, 0) rotate(10deg);}
+		}
+		@keyframes rotate-r {
+			0% {transform: scale(-1,1) translate(-27px, 0) rotate(10deg);}
+			50% {transform: scale(-1,1) translate(-27px, 0) rotate(25deg);}
+			100% {transform: scale(-1,1) translate(-27px, 0) rotate(10deg);}
+		}
+		@keyframes translate {
+			0% {left: 3px;}
+			50% {left: 6px;}
+			100% {left: 3px;}
+		}
+		@keyframes resize{
+			0% {height: 4px;}
+			50% {height: 3px;}
+			100% {height: 4px;}
+		}
+		@keyframes extend{
+			0% {height: 14px;}
+			50% {height: 23px;}
+			100% {height: 14px;}
+		}
+		@keyframes open {
+			0% {height: 27px; border-radius: 34px / 0px 0px 27px 27px;}
+			50% {height: 15px; border-radius: 34px / 0px 0px 15px 15px;}
+			100% {height: 27px; border-radius: 34px / 0px 0px 27px 27px;}
 		}
 	</style>
 </body>

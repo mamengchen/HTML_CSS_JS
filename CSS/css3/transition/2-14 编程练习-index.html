@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background: #f3f3f3;
+        }
+       /*此处补充代码*/
+	   .all {
+			width: 900px;
+			height: 300px;
+			position: relative;
+			background: #333;
+	   }
+	   .all > .one, .all > .two, .all > .three {
+		border: 5px solid red;
+		float:left;
+		position:absolute;
+	   }
+	   .all > .one {
+		width: 200px;
+		height: 100px;
+		border-radius: 50px / 0px 50px 40px 50px;
+	   }
+	   .all > .two {
+		left: 300px;
+		width: 100px;
+		height: 200px;
+		border-radius: 200px / 10px 200px 247px 150px;
+	   }
+	   .all > .three {
+		left: 500px;
+		width: 100px;
+		height: 200px;
+		border-radius:50px / 5px 50px 5px 50px;
+	   }
+    </style>
+</head>
+
+<body>
+   <!--此处补充代码-->
+	<div class="all">
+		<div class="one"></div>
+		<div class="two"></div>
+		<div class="three"></div>
+	</div>
+</body>
+</html>
