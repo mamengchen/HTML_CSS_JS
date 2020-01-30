@@ -22,7 +22,18 @@
 			<div class="nostril"></div>
 			<div class="nostril right"></div>
 		</div>
-	
+		
+		<div class="mouth center">
+			<div class="teen"></div>
+			<div class="teen right"></div>
+			<div class="tongue center"></div>
+		</div>
+		
+		<div class="body center">
+			<div class="arm"></div>
+			<div class="arm right"></div>
+		</div>
+		
 	</div>
 	<style>
 		:root{
@@ -156,7 +167,7 @@
 			height: 32px;
 			top: 42px;
 			background: #363035;
-			z-index:1;
+			z-index:3;
 			border-radius: 31px / 10px 10px 22px 22px;
 		}
 		
@@ -184,6 +195,83 @@
 		}
 		.nostril.right {
 			transform: scale(-1,1) translate(-7px, 0) rotate(30deg);
+		}
+		
+		.mouth {
+			width: 68px;
+			height: 27px;
+			background: #671316;
+			border-radius: 34px / 0px 0px 27px 27px;
+			z-index: 1;
+			box-shadow: 0px 0px 4px 0px #000 inset;
+			top: 68px;
+		}
+		.mouth:before {
+			width: 68px;
+			height: 8px;
+			background: var(--bg);
+			border-radius: 34px / 0px 0px 5px 5px;
+			content: '';
+			position: absolute;
+			z-index:1;
+		}
+		
+		.teen {
+			width: 8px;
+			height: 3px;
+			background: var(--bg);
+			border-radius: 4px / 0px 0px 0px 1px;
+			position: absolute;
+			left: 50%;
+			top: 7px;
+			transform: translate(-8px, 0);
+			z-index:1;
+		}
+		.teen.right{
+			transform:scale(-1,1) translate(0px, 0);
+			border-right: .5px solid #ddd;
+		}
+		.tongue {
+			width: 34px;
+			height: 14px;
+			background； #a2504f;
+			border-radius: 17px / 0px 0px 7px 7px;
+			z-index:0;
+			box-shadow: 0 0 4px 0 #111 inset;
+			top: 0px;
+		}
+		
+		.body {
+			width: 66px;
+			height: 70px;
+			background: var(--bg);
+			top: 89px;
+			border-radius: 50%;
+			z-index:0;
+		}
+		.arm {
+			width: 26px;
+			height: 40px;
+			background: var(--bg);
+			position: absolute;
+			left: 50%;
+			top: 5px;
+			border-radius: 13px / 20px 0 14px 20px;
+			transform: translate(-43px, 0) rotate(21deg);
+		}
+		.arm:before {
+			content: '';
+			width: 5px;
+			height: 20px;
+			border-radius: 5px / 10px 0px 0px 10px;
+			box-shadow: -1px 0px 0px rgba(200,200,200,0.5);
+			position: absolute;
+			right: 6px;
+			top: 14px;
+			transform: rotate(-5deg);
+		}
+		.arm.right {
+			transform: scale(-1,1) translate(-17px, 0) rotate(21deg);
 		}
 	</style>
 </body>
