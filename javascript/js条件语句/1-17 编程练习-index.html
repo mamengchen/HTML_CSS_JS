@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>银行业务查询</title>
+</head>
+<body>
+    <script>
+		//补充代码
+		var query=prompt("请输入您要查询的业务编号");
+		var querystr;
+		switch (query) {
+			case "1":
+			querystr="账户余额为";
+			break;
+			case "2":
+			querystr="转账余额为";
+			break;
+			case "3":
+			querystr="信用额度为";
+			break;
+			default:
+			querystr="退出银行系统";
+			break;
+		}
+		document.write(querystr+".....");
+	</script>
+</body>
+</html>

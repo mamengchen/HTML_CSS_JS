@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数字转换中文大写</title>
+</head>
+<body>
+    <script>
+		//补充代码
+		var number=prompt("请输入您想转换成中文大写的0~9的数字");
+		var numberstr;
+		switch (number) {
+			case "0":
+			numberstr="零";
+			break;
+			case "1":
+			numberstr="壹";
+			break;
+			case "2":
+			numberstr="贰";
+			break;
+			case "3":
+			numberstr="叁";
+			break;
+			case "4":
+			numberstr="肆";
+			break;
+			case "5":
+			numberstr="伍";
+			break;
+			case "6":
+			numberstr="陆";
+			break;
+			case "7":
+			numberstr="柒";
+			break;
+			case "8":
+			numberstr="捌";
+			break;
+			case "9":
+			numberstr="玖";
+			break;
+			default:
+			numberstr="输入的数字不对";
+			break;
+		}
+		document.write(numberstr);
+	</script>
+</body>
+</html>
+
