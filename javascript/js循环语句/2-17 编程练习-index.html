@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>水仙花数</title>
+</head>
+<body>
+    <script>
+	//填写代码
+		for (var i = 0; i < 1000; i++) {
+			var all = 0;
+			for (var j = i; j; j=parseInt(j/10)) {
+				var num=j%10;
+				all += (num*num*num);
+			}
+			if (i == all) {
+				document.write(i+" ");
+			}
+		}
+	</script>
+</body>
+</html>

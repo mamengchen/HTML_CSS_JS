@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>猜数字</title>
+</head>
+<body>
+    <script>
+	   //补充代码
+		var amswer=5,num;
+		do {
+			num = prompt("请您输入猜的数字");
+			if (num < 5) {
+				alert("猜小了");
+			} else if (num > 5) {
+				alert("猜大了");
+			} else {
+				alert("猜中了");
+				
+			}
+			
+		} while ( num != amswer);
+	</script>
+</body>
+</html>

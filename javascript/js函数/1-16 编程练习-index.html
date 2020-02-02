@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+<body>
+<script>
+    var userName=prompt("请输入用户名");
+    var userPwd=prompt("请输入密码");
+    var sure=prompt("请输入验证码");
+    function login(){
+        if(isNaN(arguments[1])){//补充代码
+          alert("密码错误");
+        }
+        if(arguments[2].length < 4){//补充代码
+          alert("验证码不小于4位");
+        }
+    }
+    login(userName,userPwd,sure);
+</script>
+</body>
+</html>

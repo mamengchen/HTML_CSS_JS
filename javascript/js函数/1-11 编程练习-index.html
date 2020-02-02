@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>return</title>
+</head>
+<body>
+<script>
+    var input=prompt("请输入您的密码");
+    // 补充代码
+	function funName(arg){
+		if (arg.length > 12) {
+			return "密码不能大于12位数";
+		} else if (arg.length < 6) {
+			return "密码不能小于6位数";
+		} else {
+			return "密码格式正确";
+		}
+	}
+    alert(funName(input));
+</script>
+</body>
+</html>

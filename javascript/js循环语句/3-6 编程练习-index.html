@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>break和continue</title>
+</head>
+<body>
+    <script>
+    //在此处补充代码
+		var allNum=0;
+		for (var i = 1; i < 100; i++) {
+			if ( i%2 == 1 || i%11 == 0) {
+				continue;
+			}
+			allNum += i;
+		}
+		document.write("0-100之间除22，44，66，88之外的2的倍数的和: "+allNum);
+	</script>
+</body>
+</html>
