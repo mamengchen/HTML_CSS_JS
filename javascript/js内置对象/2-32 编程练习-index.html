@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>splice</title>
+</head>
+<body>
+<script>
+   //补充代码
+   var userarray=new Array();
+   while (1) {
+		var data=prompt("请输入数据");
+		if (data == -1) {
+			break;
+		}
+		userarray.push(data);
+   }
+   var repuestarray = userarray.splice(0,2,"hello","hello");
+   document.write(userarray.join("-"));
+</script>
+</body>
+</html>

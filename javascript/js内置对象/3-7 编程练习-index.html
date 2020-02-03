@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索内容是否有敏感字"草"</title>
+</head>
+<body>
+	<script>
+		var usearray=prompt("请输入您要搜索的内容"),firstPos;
+		var judge=0;
+		function arrayIndexOf(arr,element) {
+			var data=[];
+			for(var i=0; i < arr.length; i++) {
+				if (arr.charAt(i) == element) {
+					data.push(i);
+				}
+			}
+			return data;
+		}
+		/*
+		while (1) {
+			judge=usearray.indexOf("草");
+			usearray[judge]="-";
+			if (judge == -1) {
+				break;
+			}
+			document.write("敏感字'草'在"+judge+"位置被发现");
+		}
+		*/
+		var number=arrayIndexOf(usearray,"草");
+		for (var i = 0; i < number.length; i++) {
+			document.write("敏感字'草'在"+number[i]+"位置被发现<br>");
+		}
+	</script>
+</body>
+</html>
