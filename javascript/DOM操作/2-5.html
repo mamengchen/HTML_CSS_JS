@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML与outerHTML</title>
+	<script src="domReady.js"></script>
+	<script>
+		myReady(function(){
+			var comment=document.getElementById("one");
+			console.log(comment.innerHTML);
+			comment.innerHTML="<p>哈哈</p>";
+			console.log(comment.innerHTML);
+		});
+    </script>
+</head>
+<body>
+    <div id="one"> 
+		<p>This <strong>is</strong> student</p>
+		<ul>
+			<li>apple</li>
+			<li>banana</li>
+			<li>pinner</li>
+		</ul>
+	</div>
+</body>
+</html>

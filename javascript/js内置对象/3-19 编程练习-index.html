@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+	<script>
+		var useremail=prompt("请输入登录邮箱");
+		function getFileFormat(url) {
+			var pos=url.indexOf("@");
+			return pos;
+		}
+		var monekhead=getFileFormat(useremail);
+		document.write("邮件的用户名是: "+(useremail.substring(0,monekhead))+"<br>");
+		document.write("登录的邮件域名是: "+(useremail.substring(monekhead+1))+" 邮箱");
+	</script>
+</body>
+</html>

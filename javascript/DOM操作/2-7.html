@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerText兼容</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var contant=document.getElementById("one");
+			function getInnerText(element) {
+				return typeof(element.innerText) == "string" ? element.innerText:element.TextContent; 
+			}
+			function setInnerText(element,text) {
+				if (typeof(element.innerText) == "string") {
+					return element.innerText=text;
+				} else {
+					return element.TextContent=text;
+				}
+			}
+			console.log(getInnerText(contant));
+			console.log(setInnerText(contant,"<p>呵呵</p>"));
+		});
+    </script>
+</head>
+<body>
+    <div id="one"> 
+		<p>This <strong>is</strong> student</p>
+		<ul>
+			<li>apple</li>
+			<li>banana</li>
+			<li>pinner</li>
+		</ul>
+	</div>
+</body>
+</html>

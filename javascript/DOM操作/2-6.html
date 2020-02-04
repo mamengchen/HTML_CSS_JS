@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML与outerHTML</title>
+	<script src="domReady.js"></script>
+	<script>
+		myReady(function(){
+			var comment=document.getElementById("one");
+			console.log(comment.outerHTML);
+			comment.outerHTML="<p>呵呵</p>";
+			//console.log(comment.outerHTML); 这里p标签把id为one的div也给替换了
+		});
+    </script>
+</head>
+<body>
+    <div id="one"> 
+		<p>This <strong>is</strong> student</p>
+		<ul>
+			<li>apple</li>
+			<li>banana</li>
+			<li>pinner</li>
+		</ul>
+	</div>
+</body>
+</html>

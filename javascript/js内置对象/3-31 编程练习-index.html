@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首字母变大写</title>
+</head>
+<body>
+	<script>
+		var userstr=prompt("请输入一个英文短句");
+		function camelback(str){
+			var arr=str.split(" "),newstr="";
+			for (var i=0; i < arr.length; i++) {
+				var word=arr[i];
+				newstr += word.charAt(0).toUpperCase()+word.substring(1)+" ";
+			}
+			return newstr.slice(0,-1);
+		}
+		document.write(camelback(userstr));
+	</script>
+</body>
+</html>

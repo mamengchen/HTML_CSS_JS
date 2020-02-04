@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>改变日期格式</title>
+</head>
+<body>
+	<script>
+	var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    var today=new Date(),
+		year=today.getFullYear(),
+		month=today.getMonth()+1,
+		date=today.getDate(),
+		hour=today.getHours(),
+		minute=today.getMinutes(),
+		second=today.getSeconds();
+	document.write("今天是"+year+"年"+month+"月"+date+"日"+week[today.getDay()]+"<br>"+hour+":"+minute+":"+second);
+	</script>
+</body>
+</html>
