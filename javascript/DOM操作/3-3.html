@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML与outerHTML</title>
+	<script src="domReady.js"></script>
+	<script>
+		myReady(function(){
+			var oHtml = document.documentElement;
+			//第一个子节点赋值给oHead;
+			var oHead = oHtml.firstChild;
+			console.log("这是文档的根节点的第一子节点: " + oHead);
+			oHead = oHtml.childNodes[0];
+			console.log("这是文档的根节点的第一子节点: " + oHead);
+			//next就是同级下一个节点，childNodes是子节点组可以用[]访问。
+			console.log(oHead.nextSibling == oHtml.childNodes[1]);
+			console.log(oHtml.childNodes.item(1));
+			//子级节点最后一个
+			console.log(oHtml.lastChild);
+			//子级节点倒是第二个
+			console.log(oHtml.lastChild.previousSibling);
+			//oHead的父亲节点
+			console.log(oHead.parentNode);
+			//返回元素的标签名
+			console.log(oHtml.tagName);
+		});
+    </script>
+</head>
+<body>
+    <div id="one"> 
+		<p>This <strong>is</strong> student</p>
+		<ul>
+			<li>apple</li>
+			<li>banana</li>
+			<li>pinner</li>
+		</ul>
+	</div>
+</body>
+</html>
