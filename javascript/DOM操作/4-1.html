@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementById</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var bn = document.getElementById("button");
+			bn.onclick = function(){
+				var ta = document.getElementById("targer");
+				console.log(ta.innerHTML);
+			}
+		});
+    </script>
+</head>
+<body>
+	//在IE浏览器会打印 name 也为targer的标签
+    <p name="targer">这个是name为target的p标签</p>
+	//打印第一个遇到 id 为targer
+	<a id="targer" href="#">这个是id为target的a标签</a>
+	<a id="targer" href="#">这个是id为target的另一个a标签</a>
+	<button id="button" type="button">开始测试</botton>
+</body>
+</html>

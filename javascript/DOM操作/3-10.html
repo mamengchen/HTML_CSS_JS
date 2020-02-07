@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决空白节点</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var scripts = document.scripts;
+			var links = document.links;
+			var cells = document.getElementById("tr").cells;
+			//var imgs = document.images;
+			var forms = document.forms;
+			var options = document.getElementById("select").options;
+			var ps = document.getElementsByTagName("p");
+			
+			console.log(scripts);
+			console.log(links);
+			console.log(cells);
+			//console.log(imgs);
+			console.log(forms);
+			console.log(options);
+			console.log(ps);
+			
+			//返回第一个id或者name为td的元素
+			console.log(cells.namedItem('td'));
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+      <li>节点一</li>
+      <li>节点二</li>
+      <li>节点三</li>
+    </ul>
+
+    <table border="1">
+      <tr id="tr">
+        <td>第一行</td>
+        <td name="td">第二行</td>
+        <td name="td">第三行</td>
+      </tr>
+    </table>
+
+
+    <form action="">
+      <input type="text" value="用户名">
+    </form>
+    <form action="">
+      <input type="text" value="密码">
+    </form>
+
+    <a href="#">忘记密码</a>
+    <a href="#">更多内容</a>
+
+    <select id="select">
+      <option value="0">北京</option>
+      <option value="1">天津</option>
+      <option value="2">河北</option>
+    </select>
+
+    <p>DOM探索之基础详解篇</p>
+    <p>DOM探索之节点操作篇</p>
+</body>
+</html>

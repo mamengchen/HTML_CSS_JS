@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决空白节点</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			//这个是有空白行的
+			var box=document.getElementById("box");
+			for (var i = 0, len = box.childNodes.length; i < len; i++ ) {
+				console.log(box.childNodes[i]);
+			}
+			//这个没有空白行的
+			console.log("这是消除空白格的");
+			//1.新增关键字和数组: 在之前的关键字中间加入Element
+			for (var j = 0, len = box.children.length; j < len; j++ ) {
+				console.log(box.children[j]);
+			}
+			//2.利用最新关键字nodeType
+			for (var j = 0, len = box.childNodes.length; j < len; j++) {
+				if (box.childNodes[j].nodeType == 1) {
+					console.log(box.childNodes[j]);
+				}
+			}
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

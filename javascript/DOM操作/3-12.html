@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>类数组对象NameNodeMap</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var box = document.getElementById("box");
+			var attrs = box.attributes;
+			console.log(attrs);
+			console.log(attrs.length);
+			console.log(attrs[0]);
+			console.log(attrs.item(1));
+			console.log(attrs.item(2));
+		});
+    </script>
+</head>
+<body>
+    <ul id="box" data-url="index.html" node-action="submit">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

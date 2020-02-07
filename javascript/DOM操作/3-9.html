@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>childNodes是个NodeList类数组对象</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var box = document.getElementById("box");
+			var dR = box.childNodes;
+			console.log(dR);
+			
+			function makeArray(nodeList) {
+				var arr=null;
+				try {
+					return Array.prototype.slice.call(nodeList);
+				} catch (e) {
+					arr = new Array();
+					for (var i = 0, len = nodeList.length; i < len; i++) {
+						arr.push(nodeList[i]);
+						return arr;
+					}
+				}
+				return arr;
+			}
+			var newNodeList = makeArray(dR);
+			newNodeList.push("<li>四节点</li>");
+			console.log(newNodeList);
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点遍历</title>
+	<script src="domReady.js"></script>
+	<script>
+		myReady(function(){
+			var s="";
+			function travel(space, node) {
+				//如果当前节点是标签，不是空，就拼劲字符串
+				if (node.tagName) {
+					s += space + node.tagName + "<br>";
+				}
+				//保存当前节点的子节点的个数
+				var len = node.childNodes.length;
+				//遍历节点的子节点
+				for (var i = 0; i < len; i++) {
+					travel(space + "* ", node.childNodes[i]);
+				}
+			}
+			travel("", document);
+			document.write(s);
+		})
+	</script>
+</head>
+<body>
+  <div>
+    <p>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+    </p>
+  </div>
+</body>
+</html>
