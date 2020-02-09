@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementsByClassName</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var ul = document.getElementById("box");
+			var li = ul.getElementsByClassName("left");
+			console.log(li);
+			var li = ul.getElementsByClassName("left dark");
+			console.log(li[0].innerHTML);
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li class="left">节点一</li>
+		<li class="box">节点二</li>
+		<li class="left dark">节点三</li>
+	</ul>
+</body>
+</html>

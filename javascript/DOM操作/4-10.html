@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>querySelector与querySelectorAll</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var MyDiv = document.querySelector("#myUl");
+			console.log(MyDiv);
+			var div = document.getElementById("myDiv");
+			var myli = div.querySelectorAll("li");
+			console.log(myli);
+		});
+    </script>
+</head>
+<body>
+    <input type="text" class="foobar" value="请输入内容" />
+    <div id="myDiv">
+      You are my sunshine.
+      <ul id="myUl">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+</body>
+</html>

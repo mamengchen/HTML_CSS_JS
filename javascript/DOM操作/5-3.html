@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>insertBefore</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var ul = document.getElementById("box");
+			var txt = document.createTextNode("节点四");
+			var newLi = document.createElement("li");
+			var BoxLi = ul.children.item(1);
+			newLi.appendChild(txt);
+			ul.insertBefore(newLi, BoxLi);
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

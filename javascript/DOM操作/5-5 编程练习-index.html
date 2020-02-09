@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>节点练习</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var ul = document.getElementById("list");
+			var str = ['HTML','CSS','JavaScript','HTML5'];
+			var i,len = str.length;
+			for (i = 0; i < len; i++) {
+				var newLi = document.createElement('li');
+				var newtxt = document.createTextNode(str[i]);
+				newLi.appendChild(newtxt);
+				if (i < ul.children.length) {
+					ul.replaceChild(newLi,ul.children.item(i))
+				} else {
+					ul.insertBefore(newLi,null);
+				}
+			}
+		});
+    </script>
+</head>
+<body>
+    <div id="wrap">
+      <ul id="list">
+        <li>第一个li</li>
+        <li>第二个li</li>
+        <li>第三个li</li>
+      </ul>
+    </div>
+</body>
+</html>

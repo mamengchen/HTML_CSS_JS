@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>appendChild</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var ul = document.getElementById("box");
+			var txt = document.createTextNode("节点四");
+			var newLi = document.createElement("li");
+			newLi.appendChild(txt);
+			//返回值
+			console.log(ul.appendChild(newLi));
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

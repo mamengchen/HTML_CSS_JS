@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementsByClassName的BUG</title>
+	<script src="./domReady.js"></script>
+	<script src="./getElementsByClassName.js"></script>
+	<script>
+		myReady(function(){
+			var r = getElementsByClassName({
+				searchClass: "left dark"
+			});
+			console.log(r);
+			console.log(r[0].innerHTML);
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li class="left">节点一</li>
+		<li class="box">节点二</li>
+		<li class="left dark">节点三</li>
+	</ul>
+</body>
+</html>
