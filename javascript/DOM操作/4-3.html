@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementById方法修正</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var GetElementById = function(id) {
+				var el = document.getElementById("targer");
+				if (!+'\v1') {
+					if (el && el.id === id) {
+						return el;
+					} else {
+						var els = document.all[id],
+							len = els.length;
+						for (var i = 0; i < len; i++) {
+							if (els[i].id === id)
+								return els[i];
+						}
+					}
+				} 
+				return el;
+			};
+			var bn = document.getElementById("button");
+			bn.onclick = function(){
+				console.log(GetElementById("targer"));
+			}
+		});
+    </script>
+</head>
+<body>
+	//在IE浏览器会打印 name 也为targer的标签
+    <p name="targer">这个是name为target的p标签</p>
+	//打印第一个遇到 id 为targer
+	<a id="targer" href="#">这个是id为target的a标签</a>
+	<a id="targer" href="#">这个是id为target的另一个a标签</a>
+	<button id="button" type="button">开始测试</botton>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementsByName与BUG解决方法</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var citys = document.getElementsByName("city");
+			console.log(citys);
+		});
+    </script>
+</head>
+<body>
+    北京<input type="checkbox" id="beijing" name="city" value="北京"/>
+	天津<input type="checkbox" name="city" value="天津" />
+	上海<input type="checkbox" name="city" value="上海" />
+</body>
+</html>
