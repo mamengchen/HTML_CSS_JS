@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>disabled</title>
+    <script src="domReady.js"></script>
+    <script>
+      myReady(function(){
+        var nationality = document.getElementById('nationality');
+        nationality.disabled = false;
+      });
+    </script>
+  </head>
+  <body>
+    国籍：<input id="nationality" type="text" value="中国" disabled="disabled" />
+  </body>
+</html>

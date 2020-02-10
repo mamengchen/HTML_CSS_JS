@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>布尔属性</title>
+    <script src="domReady.js"></script>
+    <script>
+      myReady(function(){
+        var inputs = document.querySelectorAll("input");
+        inputs[0].checked = 1;
+        inputs[0].removeAttribute('checked');
+      });
+    </script>
+  </head>
+  <body>
+    你去过的城市：<br/>
+    <input type="checkbox">北京
+    <input type="checkbox" checked="checked">香港
+    <input type="checkbox" checked>纽约
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>normalize</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var newDiv = document.createElement('div');
+			var contand = document.createTextNode("dom操作");
+			newDiv.appendChild(contand);
+			var secondCd = document.createTextNode("哈哈哈哈");
+			newDiv.appendChild(secondCd);
+			document.body.appendChild(newDiv);
+			console.log(newDiv.childNodes.length);
+			newDiv.normalize();
+			console.log(newDiv.childNodes.length);
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

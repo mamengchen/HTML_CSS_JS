@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>splitText</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var newDiv = document.createElement('div');
+			var newTxt = document.createTextNode('GitHub为我们提供了解决');
+			newDiv.appendChild(newTxt);
+			document.body.appendChild(newDiv);
+			var newNode = newDiv.firstChild.splitText(6);
+			console.log(newDiv.firstChild.nodeValue);
+			console.log(newNode.nodeValue);
+			console.log(newDiv.childNodes.length);
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

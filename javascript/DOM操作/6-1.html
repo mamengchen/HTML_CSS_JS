@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除节点</title>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var ul = document.getElementById("box");
+			console.log(ul.removeChild(ul.childNodes[1]));
+			// removeNode是IE特有的里面参数bool
+			//console.log(ul.childNodes[1].removeNode());
+		});
+    </script>
+</head>
+<body>
+    <ul id="box">
+		<li>节点一</li>
+		<li>节点二</li>
+		<li>节点三</li>
+	</ul>
+</body>
+</html>

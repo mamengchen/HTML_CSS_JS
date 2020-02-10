@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    div:not(:nth-of-type(2)) {
+        width: 500px;
+        height: 100%;
+        background-color: #00c4ff7a;
+        margin: 0 auto;
+    }
+    /*ul默认有外边距*/
+
+    ul {
+        width: 300px;
+        height: 100%;
+        background-color: #f9c3e6d6;
+        list-style: none;
+        /*清除默认边距*/
+        margin: 0;
+        padding: 0;
+        margin: 20px auto;
+        margin-bottom: 30px;
+    }
+
+    li {
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        margin: 30px auto;
+        background-color: #cdffc0;
+    }
+    </style>
+	<script src="./domReady.js"></script>
+	<script>
+		myReady(function(){
+			var addbn = document.getElementById("btnAdd"),i=3;
+			addbn.onclick = function(){
+				var newUl = document.getElementById("list");
+				i++;
+				var newText = document.createTextNode("我是li"+i);
+				var newLi = document.createElement("li");
+				newLi.appendChild(newText);
+				newUl.appendChild(newLi);
+			}
+			var rmbn = document.getElementById("btnRemove");
+			rmbn.onclick = function() {
+				var newUl = document.getElementById("list");
+				var rmLi = newUl.children[--i];
+				newUl.removeChild(rmLi);
+			}
+		});
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <button id="btnAdd">添加元素</button>
+        <button id="btnRemove">删除元素</button>
+        <ul id="list">我是ul
+            <li>我是li1</li>
+            <li>我是li2</li>
+            <li>我是li3</li>
+        </ul>
+    </div>
+</body>
+</html>

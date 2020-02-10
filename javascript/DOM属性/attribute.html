@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>attribute</title>
+    <script src="domReady.js"></script>
+    <script>
+      myReady(function(){
+        var div = document.querySelector('div');
+		//attributes返回标签的属性个数
+        console.log(div.attributes);
+      });
+    </script>
+  </head>
+  <body>
+    <div url="http://www.baidu.com" xxx="aaa" Yyy="bbb" xxx="ccc"></div>
+  </body>
+</html>
