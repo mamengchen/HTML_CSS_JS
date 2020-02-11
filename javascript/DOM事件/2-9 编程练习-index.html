@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML事件</title>
+	<style>
+		.btn {
+			width: 140px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 14px;
+			font-weight: bolder;
+			border-radius: 10px;
+			text-align:center;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body>
+    <!--补充代码-->
+	<input class="btn" type="button" value="开 始" onmouseover="fontColor(this,'red')" onmouseout="fontOutColor(this)"/>
+	<input class="btn" type="button" value="结 束" onmouseover="fontColor(this,'orange')" onmouseout="fontOutColor(this)"/>
+	<script type="text/javascript">
+		//补充代码
+		function fontColor(btn, bgColor) {
+			btn.style.color = bgColor;
+		}
+		
+		function fontOutColor(btn) {
+			btn.style.color = "#333";
+		}
+	</script>	
+</body>
+</html>

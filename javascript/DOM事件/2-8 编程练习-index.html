@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Property</title>
+	<style>
+		#txt{width: 140px; height:30px;line-height: 30px;background:#00f;color:#fff;
+		font-size: 14px; text-align:center;border-radius:10px;cursor:pointer;margin-top: 30px;}
+	</style>
+    
+  </head>
+  <body>
+    <input type="button" id="txt" value="确 定" onclick="changeColor(this,'green')" />
+	<script>
+        function changeColor(btn, bgColor) {
+			btn.style.background = bgColor;
+		}
+    </script>
+  </body>
+</html>

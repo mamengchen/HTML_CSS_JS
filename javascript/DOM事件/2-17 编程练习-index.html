@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>信息录入</title>
+</head>
+<body>
+    <input type="button" value="录入" >
+    <script type="text/javascript">
+	    var inputs=document.getElementsByTagName("input");
+	    var entry=inputs[0];
+	    entry.onclick=entryFn;
+		function entryFn(){
+	    	//补充代码
+			var numDate=[];
+			while(1) {
+				var number=prompt("输入");
+				if (number == '-1') {
+					break;
+				}
+				numDate.push(number);
+			}
+			document.write(numDate);
+		}
+	</script>
+</body>
+</html>
