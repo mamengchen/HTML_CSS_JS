@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件委托</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+    <ul id="myUl">
+		<li id='one'>item1</li>
+		<li id='two'>item2</li>
+		<li id='thr'>item3</li>
+		<li id='four'>item4</li>
+	</ul>
+	<script>
+		var myUl = document.getElementById('myUl');
+		myUl.addEventListener('click',function(event){
+			var num;
+			switch(event.target.id) {
+				case 'one':
+					num = 1;
+					break;
+				case 'two':
+					num = 2;
+					break;
+				case 'thr':
+					num = 3;
+					break;
+				case 'four':
+					num = 4;
+					break;
+				default:
+					num='不合理'
+					break;
+			} 
+			alert(num);
+		});
+	</script>
+</body>
+</html>

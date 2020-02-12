@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>支持跨平台的事件添加和删除</title>
+	<style>
+		#btn {
+			width: 140px;
+			height: 30px;
+			font-size: 16px;
+			line-height: 16px;
+			text-align: center;
+			font-weight: bolder;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+    <button id="btn">确 定</button>
+	<script>
+		var EventUtil = {
+			addEvent: function(element, type, headler) {
+				if (element.addEventListener) {
+					element.addEventListener(type, headler);
+				} else if (element.attachEvent) {
+					element.attachEvent('on'+type, headler);
+				} else {
+					element['on'+type];
+				}
+			},
+			removeEvent: function(element, type, headler) {
+				if (element.removeEventListener) {
+					element.removeEventListener(type, headler);
+				} else if (element.detachEvent) {
+					element.detachEvent('on'+type, headler);
+				} else {
+					element['on'+type];
+				}
+			}
+		}
+		var btn = document.getElementById('btn'),
+			myFunction = function(){alert('你好');}
+		EventUtil.addEvent(btn, 'click', myFunction,false);
+		EventUtil.removeEvent(btn,'click',myFunction);
+	</script>
+</body>
+</html>

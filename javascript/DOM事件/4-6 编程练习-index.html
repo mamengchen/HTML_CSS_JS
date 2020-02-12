@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入文本</title>
+		<style>
+			b {
+				font-weight: bolder;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>字数限制在30字内，<span>您还可以输入<b>30</b> 字</span></p>
+		<textarea cols="50"  rows="7"  id="text"></textarea>
+		<script type="text/javascript">
+			var numB = document.getElementsByTagName('b')[0],
+				arrlen = 30,
+				text = document.getElementById('text');
+			document.onkeyup = function() {
+				var len = text.value.length;
+				numB.innerHTML = arrlen - len;
+			}
+		</script>
+	</body>
+</html>
