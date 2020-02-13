@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+	<style>
+		#myDiv {
+			width: 300px;
+			height: 700px;
+			background: green;
+		}
+		#parent {
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		#child {
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<a href='https://www.baidu.com/' id='myA'>百 度</a>
+	<div id='parent'>
+		<div id='child'></div>
+	</div>
+    <div id='myDiv'></div>
+	
+	<script>
+		var myA = document.getElementById('myA');
+		myA.addEventListener('click',function(event){
+			event.preventDefault();//阻止事件发生
+			alert('打开百度');
+			console.log(event.type);
+		});
+		
+		var Parent = document.getElementById('parent');
+		Parent.addEventListener('click',function(event){
+			console.log(event.target); //指向事件源
+			console.log(event.currentTarget);	//指向绑定事件
+		});
+		
+		var MyDiv = document.getElementById('myDiv');
+		MyDiv.addEventListener('click',function(event){
+			console.log('clientY:'+event.clientY+'; pageY:'+event.pageY+'; screenY:'+event.screenY);
+		});
+	</script>
+</body>
+</html>
