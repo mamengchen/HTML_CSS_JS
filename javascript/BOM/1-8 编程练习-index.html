@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入框</title>
+		<style>
+			* {margin:0;padding:0;}
+			#ipt {
+				height: 30px;
+				width: 100px;
+				font-size: 16px;
+				line-height: 16px;
+				text-align: center;
+				font-weight: bolder;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input id="ipt" type="button" value="点击">
+		<script type="text/javascript">
+			var myIpt = document.getElementById('ipt');
+			myIpt.addEventListener('click',function() {
+				var text = prompt("请输入你想要的按钮");
+				if (text) {
+					myIpt.value = text;
+				}
+			})
+		</script>
+	</body>
+</html>

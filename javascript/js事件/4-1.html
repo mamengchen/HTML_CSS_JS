@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变颜色</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		#canves {
+			height: 500px;
+		}
+		
+		#myUl > li {
+			float: left;
+			width: 100px;
+			height: 30px;
+			border-radius: 10px;
+			text-align: center;
+			line-height: 30px;
+			color: #fff;
+		}
+		
+		li:nth-child(1) {
+			background: red;
+		}
+		li:nth-child(2) {
+			background: black;
+		}
+		li:nth-child(3) {
+			background: green;
+		}
+		li:nth-child(4) {
+			background: orange;
+		}
+		li:nth-child(5) {
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+    <div id="canves"></div>
+	<ul id='myUl'>
+		<li>红色</li>
+		<li>黑色</li>
+		<li>绿色</li>
+		<li>橙色</li>
+		<li>蓝色</li>
+	</ul>
+	<script>
+		var EventUtil = {
+			addEvent: function(element, type, headler) {
+				if (element.addEventListener) {
+					element.addEventListener(type, headler);
+				} else if (element.attachEvent) {
+					element.attachEvent('on'+type, headler);
+				} else {
+					element['on'+type];
+				}
+			},
+			removeEvent: function(element, type, headler) {
+				if (element.removeEventListener) {
+					element.removeEventListener(type, headler);
+				} else if (element.detachEvent) {
+					element.detachEvent('on'+type, headler);
+				} else {
+					element['on'+type];
+				}
+			},
+			getTarget: function(event){
+				return event.target || event.srcElement;
+			},
+			preventDefault: function(event) {
+				if (event.preventDefault) {
+					event.preventDefault();
+				} else {
+					event.returnValue = false;
+				}
+			},
+			stopPropagation: function(event) {
+				if (event.stopPropagation) {
+					event.stopPropagation();
+				} else {
+					event.cancelBubble = true;
+				}
+			}
+		}
+		
+		var myDiv = document.getElementById('canves'),
+			myUl = document.getElementById('myUl');
+		EventUtil.addEvent(myUl, 'click', function(event){
+			var liText;
+			switch(event.target.innerHTML) {
+				case '红色':
+					liText = 'red';
+					break;
+				case '黑色':
+					liText = 'black';
+					break;
+				case '蓝色':
+					liText = 'blue';
+					break;
+				case '橙色':
+					liText = 'orange';
+					break;
+				case '绿色':
+					liText = 'green';
+					break;
+				default:
+					liText = '#fff';
+					break;
+			}
+			myDiv.style.background = liText;
+		})
+	</script>
+</body>
+</html>

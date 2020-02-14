@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入框</title>
+		<style>
+			* {margin:0;padding:0;}
+			#ipt {
+				height: 30px;
+				width: 100px;
+				font-size: 16px;
+				line-height: 16px;
+				text-align: center;
+				font-weight: bolder;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input id="ipt" type="button" value="删除">
+		<script type="text/javascript">
+			var ipt = document.getElementById('ipt');
+			ipt.addEventListener('click',function(){
+				if(confirm('确定删除')) {
+					ipt.style.color = 'red';
+				} else {
+					ipt.style.color = 'green';
+				}
+			})
+		</script>
+	</body>
+</html>

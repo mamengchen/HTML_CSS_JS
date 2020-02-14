@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>打开/关闭页面</title>
+		<style>
+			* {margin:0;padding:0;}
+			#open,#close {
+				height: 30px;
+				width: 100px;
+				font-size: 16px;
+				line-height: 16px;
+				text-align: center;
+				font-weight: bolder;
+				border-radius: 10px;
+			}
+		</style>
+    </head>
+    <body>
+       <input type="button" value="关闭本页面" id="close">
+       <input type="button" value="打开慕课网" id="open">
+       <script type="text/javascript">
+			var cls = document.getElementById('close'),
+				opn = document.getElementById('open');
+			opn.addEventListener('click',function(){
+				open('http://www.imooc.com','imooc');
+			})
+			cls.addEventListener('click',function(){
+				close();
+			})
+       </script>
+    </body>
+</html>

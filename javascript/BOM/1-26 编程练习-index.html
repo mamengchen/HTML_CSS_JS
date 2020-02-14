@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>setInterval()</title>
+        <style type="text/css">
+            div{
+                width:300px;
+                height:300px;
+                border:1px solid #333;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="开始">
+        <br><br>
+        <div></div>
+        <script type="text/javascript">
+			var inpt = document.getElementsByTagName('input')[0],
+				myDiv = document.getElementsByTagName('div')[0];
+			inpt.addEventListener('click',function(){
+				var IntervalId = setInterval(function(){
+					myDiv.innerHTML += ' hallo';
+				}, 1000);
+				
+				setTimeout(function(){
+					clearInterval(IntervalId);
+				}, 10000);
+			})
+        </script>
+    </body>
+</html>

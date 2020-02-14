@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <style type="text/css">
+        div{width:400px;height:120px;margin-top:50px;border:2px solid gray;padding:10px;}
+		input {
+				height: 30px;
+				width: 100px;
+				font-size: 16px;
+				line-height: 16px;
+				text-align: center;
+				font-weight: bolder;
+				border-radius: 10px;
+			}
+    </style>
+</head>
+<body>
+     <input type="button" value="删除">
+     <input type="button" value="取消删除">
+    <div>点击"删除"按钮后，里面的内容将在3秒钟后消失；<br/><br/>如点击了"删除"后又不想删除内容，请在点击"删除"按钮3秒之内点击"取消删除"按钮即可</div>
+    <script type="text/javascript">
+		var deleteIpt = document.getElementsByTagName('input')[0],
+			cancelDel = document.getElementsByTagName('input')[1],
+			myDiv = document.getElementsByTagName('div')[0];
+		var keyTime;
+		deleteIpt.addEventListener('click',function(){
+			keyTime = setTimeout(function(){
+				myDiv.innerHTML = '';
+			},3000);
+		});
+		cancelDel.addEventListener('click',function(){
+			clearTimeout(keyTime);
+			console.log('取消删除');
+		});
+    </script>
+</body>
+</html>

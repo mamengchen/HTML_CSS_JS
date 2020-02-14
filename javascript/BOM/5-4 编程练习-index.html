@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>userAgent</title>
+    </head>
+    <body>
+		<input type="button" value="点击获取浏览器信息" id="browser">
+		<script type="text/javascript">
+			var inpt = document.getElementById('browser');
+			inpt.addEventListener('click', function(){
+				var Borwesr = navigator.userAgent.toLowerCase(),
+					centont;
+				alert(Borwesr);
+				if (Borwesr.indexOf('chrome') > -1) {
+					centont = 'chrome';
+				} else if(Borwesr.indexOf('firefox') > -1) {
+					centont = 'firefox';
+				} else if (Borwesr.indexOf('mozilla') > -1) {
+					centont = 'IE';
+				} else {
+					centont = '其他';
+				}
+				alert('正在使用: '+centont+'浏览器');
+			})
+		</script>   
+    </body>
+</html>
