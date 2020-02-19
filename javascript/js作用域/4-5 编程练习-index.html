@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>变量、作用域</title>
+    
+</head>
+<body>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+    <script type="text/javascript">
+//     var btns = document.getElementsByTagName('button');
+//          for (var i = 0; i < 3; i++) {
+//             	btns[i].onclick = function () {
+// 		    	alert(i + 1);
+// 	    	};
+// 	   }
+//在此处修改代码
+		var btns = document.getElementsByTagName('button');
+		for (var i = 0; i < 3; i++) {
+			btns[i].setAttribute('data-id', i+1);
+			btns[i].onclick = function() {
+				var ss = this.getAttribute('data-id');
+				alert(ss);
+			};
+		}
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>变量、作用域</title>
+</head>
+<body>
+<script type="text/javascript">
+    var a = {name: 'xm'}, b = [4];
+	/*此处添加代码*/
+	b.push(a);
+	a = b[0];
+	b = b[1];
+	console.log(a+'||'+b.name);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>函数定义的位置</title> 
+</head> 
+<body> 
+<script type="text/javascript"> 
+//在此处补充代码
+	var datStr = prompt("请输入两个数用-隔开");
+	var datArr = datStr.split('|');
+	
+	function isNumber(num) {
+		if (isNaN(num)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function add(num1 , num2) {
+		if (isNumber(num1) && isNumber(num2)) {
+			alert('请输入两个数字');
+			return;
+		}
+		return parseInt(num1)+parseInt(num2);
+	}
+	
+	document.write(add(datArr[0],datArr[1]));
+	
+</script> 
+</body> 
+</html>

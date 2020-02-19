@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>三种定义方式</title> 
+</head> 
+<body> 
+<script type="text/javascript"> 
+// 补充代码
+	var add = new Function('num1','num2','return num1+num2'),
+		subtract = new Function('num1','num2','return num1-num2'),
+		multiple = new Function('num1','num2','return num1*num2'),
+		divide = new Function('num1','num2','return num1/num2');
+	var i = subtract(add(multiple(21,32),divide(24,3)),5);
+	var num = 21*32+24/3-5;
+	console.log(i+' || '+num);
+</script> 
+</body> 
+</html>
