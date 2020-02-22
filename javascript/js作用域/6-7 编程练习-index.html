@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title> arguments</title> 
+</head> 
+<body> 
+   <p id="test" style="background-color: red; color: blue;">我是一个段落！</p>
+<script type="text/javascript"> 
+	function judgeCss(cssStyle,StyleN) {
+		if (arguments.length == 0) return StyleN;
+		else if(arguments.length == 1) {
+			this.style['color'] = arguments[0];
+		}
+		else {
+			this.style[cssStyle] = StyleN;
+		}
+	}
+	var pId = document.getElementById('test');
+	var strStr = prompt('请输入修改的元素名称以及需要的颜色英文名').split(':');
+	judgeCss.apply(pId,strStr)
+</script> 
+</body> 
+</html>

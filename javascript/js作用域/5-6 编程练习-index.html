@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>方法的调用</title>
+<style type="text/css">
+    #box{position: relative; width: 100px; height: 100px; 
+         background-color: red; margin: 10px auto;}
+    #close{position: absolute; right: 0px; top: -4px; color: yellow;}
+    #btn{display: block; width: 100px; margin: 0 auto;}
+</style>
+</head>
+<body>
+    <div id="box">
+        <span id="close">X</span>
+    </div>
+    <button id="btn">关闭</button>
+<script type="text/javascript">
+    var divBox = document.getElementById('box'),
+		spanClose = document.getElementById('close'),
+		btnCl = document.getElementById('btn');
+	btnCl.addEventListener('click',function(){
+		spanClose.onclick();
+	});
+	spanClose.onclick = function() {
+		divBox.style.display = 'none';
+	}
+	
+</script>
+</body>
+</html>
