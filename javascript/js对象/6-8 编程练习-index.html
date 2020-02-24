@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+		function Animal(name,number) {
+			this.name = name || 'Animal';
+			this.number = number || 0;
+			this.getInfo = function () {
+				console.log(this.name + ' : ' + this.number);
+			};
+		}
+		
+		function Cat() {
+			Animal.call(this,'Cat',20);
+		}
+		function Dog(arr) {
+			Animal.apply(this,arr);
+		}
+		var cat = new Cat();
+		var dog = new Dog(['Dog',30]);
+		cat.getInfo();
+		dog.getInfo();
+    </script>
+</body>
+</html>

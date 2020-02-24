@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+<body>
+    <script type="text/javascript">
+            function add() {
+				var cum = 0;
+				for (var i = 0; i < arguments.length; i++) {
+					cum += arguments[i]*1;
+				}
+				return cum;
+			}
+			console.log(add(1,2,4,5,6,7,9));
+    </script>
+</body>
+</html>

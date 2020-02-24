@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+	/*
+    function pTest(){
+		this.say = function(){
+			alert("11");
+		}
+	}
+	pTest.prototype.play = function(){
+		alert("22");
+	}
+	pTest.prototype.name = "haha";
+	pTest.prototype.arr = function(){
+		console.log('hhh');
+	};
+	function cTest(){
+		this.eat=function(){
+			alert("33");
+		}
+	}
+	
+	cTest.prototype.name = "lala";
+	cTest.prototype.arr = 'lala2';
+	
+	cTest.prototype = new pTest();
+	var people = new cTest();
+	console.log(people.name);
+	console.log(people.arr);
+    */
+	function Animal(){
+		this.name = 'animal';
+		this.number = 20;
+	};
+	
+	function Cat(){}
+	Cat.prototype = new Animal();
+	Cat.prototype.info = function(){
+		console.log('Cat : '+this.number);
+	}
+	
+	var cat = new Cat();
+	cat.info();
+	</script>
+</body>
+</html>

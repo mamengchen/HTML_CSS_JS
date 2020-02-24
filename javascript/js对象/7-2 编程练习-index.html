@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+        function Animal() {
+			this.name = "Animal";
+			this.foot = "animfoot";
+			this.sey = function() {
+				console.log(this.name + '喜欢吃' + this.foot);
+			};
+		}
+		
+		function Dog() {
+			this.name = "Dog";
+			this.foot = "gutou";
+		}
+		
+		var animal = new Animal();
+		var dog = new Dog();
+		animal.sey.call(dog,",");
+    </script> 
+</body>
+</html>

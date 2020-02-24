@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-4</title>
+</head>
+<body>
+<script>
+	function student() {
+		this.set = function(_name,_age,_sex){
+			_set(_name,_age,_sex);
+		};
+		this.get = function() {
+			return _get();
+		};
+		var name,age,sex;
+		function _set(_name,_age,_sex) {
+			name = _name;
+			age = _age;
+			sex = _sex;
+		}
+		function _get() {
+			return [name,age,sex];
+		};
+		
+	};
+	
+	var a = new student();
+	a.set('zhyu',18,'男');
+	console.log(a.get());
+	console.log(a.name);
+</script>
+</body>
+</html>

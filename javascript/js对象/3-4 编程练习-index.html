@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">  
+		// json格式
+		var imooc = {
+			name:'imooc',
+			action: function() {
+				alert('前端');
+			}
+		}
+		// Object方式
+		var obj = new Object();
+		obj.name = 'imooc';
+		obj.action = function(){
+			alert('前端');
+		}
+		console.log(obj.name);
+		obj.action();
+		// 构造函数方式
+		function imoocObj(name, action){
+			this.name = name;
+			this.action = action;
+			return this;
+		}
+		var iimooc = imoocObj('imooc',function(){
+			alert('前端');
+		});
+		iimooc.action();
+		console.log(iimooc.name);
+
+	</script>
+</body>
+</html>
