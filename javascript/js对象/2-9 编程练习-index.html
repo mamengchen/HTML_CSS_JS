@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-1</title>
+    <style>
+        li {
+			cursor:pointer;
+		}
+    </style>
+</head>
+<body>
+    <!-- 补充代码 -->
+	<ul>
+		<li>1</li>
+		<li>2</li>
+	</ul>
+    <script>
+        var li=document.getElementsByTagName("li");
+        for(var i=0,len=li.length;i<len;i++){
+            (function(i){
+               li[i].onclick = function() {
+				alert(this.innerHTML);
+			   }
+            })(i)
+        }
+    </script>
+</body>
+</html>

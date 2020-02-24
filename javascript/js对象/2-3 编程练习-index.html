@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+		var a = 111;
+		function text() {
+			alert(a);
+			var a = 11;
+			function subtext() {
+				alert(a);
+			}
+			return subtext;
+		}
+		text()();
+    </script>
+</body>
+</html>
